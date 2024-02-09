@@ -17,6 +17,7 @@ module.exports = (app) => {
     "/auth/google/redirect",
     passport.authenticate("google"),
     (req, res) => {
+      console.log("first res: ", res);
       console.log("The user has been authenticated");
       res.redirect(process.env.FRONTEND);
     }
@@ -26,26 +27,25 @@ module.exports = (app) => {
   app.get("/api/current", (req, res) => {
     console.log("HERE AUTHENTICATED")
     console.log(req.isAuthenticated());
-    if (req.isAuthenticated()) {
-      res.json({
+    if(req.isAuthenticated() == true) {
+      return res.json({
         authenticated: true,
         filledForm: req.user.responses ? true : false,
         isadmin: req.user.isadmin,
         isSuperAdmin: req.user.isSuperAdmin,
         image: req.user.photo,
         name: req.user.name,
-        
       });
     
-    } else {
-      res.json({
+    }
+    else {
+      return res.json({
         authenticated: false,
         filledForm: false,
         isadmin: false,
         isSuperAdmin: false,
         image: null,
         name: null,
-        
       });
     }
   });
