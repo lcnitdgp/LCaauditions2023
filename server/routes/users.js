@@ -24,7 +24,8 @@ module.exports = (app) => {
 
   // CHECK AUTHENTICATED //
   app.get("/api/current", (req, res) => {
-    console.log(req);
+    console.log("HERE AUTHENTICATED")
+    console.log(req.isAuthenticated());
     if (req.isAuthenticated()) {
       res.json({
         authenticated: true,
