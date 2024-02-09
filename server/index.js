@@ -35,7 +35,7 @@ mongoose.connect('mongodb+srv://ankitpratap04:ankitpapa@cluster0.pkvjlgv.mongodb
 // };
 
 // Enable CORS with the specified options
-app.use(cors({ credentials: true, origin: 'http://localhost', "Access-Control-Allow-Credentials": true}));
+app.use(cors({ credentials: true, origin: 'http://localhost:3000', "Access-Control-Allow-Credentials": true}));
 app.set("trust proxy", 1);
 
 //middleware
