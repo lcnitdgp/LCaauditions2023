@@ -35,7 +35,7 @@ mongoose.connect('mongodb+srv://ankitpratap04:ankitpapa@cluster0.pkvjlgv.mongodb
 // };
 
 // Enable CORS with the specified options
-app.use(cors({ credentials: true, origin: 'http://localhost:3000', "Access-Control-Allow-Credentials": true}));
+app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
 app.set("trust proxy", 1);
 
 //middleware
@@ -49,8 +49,6 @@ app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000, //token expires after 30 days
     keys: [process.env.SECRET],
-    resave: true, //save session on every request 
-    saveUninitialized: true, //save uninitialized sessions (new and not modified)
   })
 );
 
