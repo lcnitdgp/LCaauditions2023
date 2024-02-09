@@ -19,7 +19,7 @@ module.exports = (app) => {
     (req, res) => {
       console.log(req.user)
       console.log("The user has been authenticated");
-      res.redirect(process.env.FRONTEND);
+      res.redirect(`${process.env.FRONTEND}/profile`);
     }
   );
 
@@ -27,6 +27,7 @@ module.exports = (app) => {
   app.get("/api/current", (req, res) => {
     console.log("HERE AUTHENTICATED")
     console.log(req.isAuthenticated());
+    console.log(req.user)
     if(req.isAuthenticated() == true) {
       return res.json({
         authenticated: true,
