@@ -47,10 +47,12 @@ app.use(cookieParser());
 //to inform passport to use cookie based auth
 app.use(
   cookieSession({
+    name: 'session1',
     maxAge: 30 * 24 * 60 * 60 * 1000, //token expires after 30 days
     keys: [process.env.SECRET],
-    // sameSite: "none",
-    // secure: true,
+    sameSite: "none",
+    secure: true,
+    httpOnly: false,
   })
 );
 
