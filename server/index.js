@@ -35,7 +35,7 @@ mongoose.connect('mongodb+srv://ankitpratap04:ankitpapa@cluster0.pkvjlgv.mongodb
 // };
 
 // Enable CORS with the specified options
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }));
+app.use(cors({ credentials: true, origin: process.env.FRONTEND }));
 app.set("trust proxy", 1);
 
 //middleware
@@ -49,6 +49,8 @@ app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000, //token expires after 30 days
     keys: [process.env.SECRET],
+    sameSite: "none",
+    secure: true,
   })
 );
 
@@ -81,6 +83,6 @@ require("./routes/questions")(app);
 //   });
 // }
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("The server is active on :", PORT);
 });
