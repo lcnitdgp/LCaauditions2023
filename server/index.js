@@ -49,8 +49,8 @@ app.use(
   cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000, //token expires after 30 days
     keys: [process.env.SECRET],
-    sameSite: "none",
-    secure: true,
+    // sameSite: "none",
+    // secure: true,
   })
 );
 
