@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cookieSession = require("cookie-session");
 const chalk = require("chalk");
-
+const session = require("express-session")
 // import the environment variables
 require("dotenv").config();
 
@@ -18,6 +18,7 @@ var passport = require("passport");
 require("./passport/passportgoogle")(passport);
 
 const MONGO_URL = process.env.MONGO;
+
 
 mongoose.connect('mongodb+srv://ankitpratap04:ankitpapa@cluster0.pkvjlgv.mongodb.net/', {
   useNewUrlParser: true,
@@ -37,6 +38,12 @@ mongoose.connect('mongodb+srv://ankitpratap04:ankitpapa@cluster0.pkvjlgv.mongodb
 // Enable CORS with the specified options
 app.use(cors({ credentials: true, origin: process.env.FRONTEND }));
 app.set("trust proxy", 1);
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: false }
+}))
 
 //middleware
 app.use(bodyParser.json({ limit: "50mb", extended: true }));
@@ -45,16 +52,16 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.use(cookieParser());
 
 //to inform passport to use cookie based auth
-app.use(
-  cookieSession({
-    name: 'session1',
-    maxAge: 30 * 24 * 60 * 60 * 1000, //token expires after 30 days
-    keys: [process.env.SECRET],
+// app.use(
+  // cookieSession({
+    // name: 'session1',
+    // maxAge: 30 * 24 * 60 * 60 * 1000, //token expires after 30 days
+    // keys: [process.env.SECRET],
     // sameSite: "none",
     // secure: true,
     // httpOnly: false,
-  })
-);
+//   })
+// );
 
 // Inititalize passport
 
