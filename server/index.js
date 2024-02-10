@@ -50,9 +50,9 @@ app.use(
     name: 'session1',
     maxAge: 30 * 24 * 60 * 60 * 1000, //token expires after 30 days
     keys: [process.env.SECRET],
-    sameSite: "none",
-    secure: true,
-    httpOnly: false,
+    // sameSite: "none",
+    // secure: true,
+    // httpOnly: false,
   })
 );
 
