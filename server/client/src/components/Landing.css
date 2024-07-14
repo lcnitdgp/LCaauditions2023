@@ -185,7 +185,7 @@
   transform: matrix3d(1, 0, 0, 0, 0, 0, -1, 0.003, 0, 1, 0, 0, 0, 0, 0, 1);
 }
 
-/*MENU*/
+/* MENU */
 
 .Landing .square {
   border: 1px solid #9f7f5e;

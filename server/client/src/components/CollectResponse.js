@@ -93,7 +93,7 @@ class CollectResponse extends Component {
         element
       ];
       // console.log(_id,options);
-      // console.log(type, _id, index,this.state.response[_id]);
+      // console.log(type,_id,index,this.state.response[_id]);
       if (type === "text") {
         return (
           <Form.Group controlId={`formGroup-${_id}`} key={_id}>
@@ -231,7 +231,7 @@ class CollectResponse extends Component {
             </Form.Label>
             <div style={{ marginLeft: "0.1rem" }}>
               {fields.map(({ content, type, options }, index) => {
-                // console.log(content, type, options);
+                // console.log(content,type,options);
 
                 if (type === "text") {
                   return (

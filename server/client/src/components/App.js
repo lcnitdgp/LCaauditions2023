@@ -60,7 +60,7 @@ class App extends Component {
                       path="/"
                       user={this.props}
                     />
-                    {/* login Routes */}
+                    {/* Google Authentication Routes */}
                     {this.props.user.authenticated ? (
                       <>
                         <Route exact component={CollectResponse} path="/form" />

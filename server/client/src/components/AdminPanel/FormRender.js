@@ -17,7 +17,7 @@ export class FormRender extends Component {
     return renderElements;
   };
   render() {
-    // console.log(this.props.adminForm);
+    //console the adminform;
     return <div className="render-form">{this.renderFormElements()}</div>;
   }
 }

@@ -185,7 +185,7 @@ input[type="range"] {
   transform-origin: 50% 50%;
   margin: -10px 0 0 0;
   position: relative;
-  top: 3px;
+  top: 4px;
 }
 
  */
@@ -215,7 +215,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   background: #121111;
 }
 
-/*IE & Edge thumb*/
+/*IE and Edge thumb*/
 
 .form-group {
   display: flex;
