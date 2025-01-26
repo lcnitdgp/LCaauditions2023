@@ -8,7 +8,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: url(../images/hungergames51.jpeg) rgb(0 0 0 / 22%);
+  background: url(../images/stranger1.jpg) rgb(0 0 0 / 22%);
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,7 +18,7 @@
 /* till 842 it was fine */
 @media (min-width: 900px) {
   .App {
-    background: url(../images/hungergames71.jpeg) rgb(0 0 0 / 22%);
+    background: url(../images/stranger11.jpg) rgb(0 0 0 / 22%);
     background-size: cover;
     background-position: center center;
   }

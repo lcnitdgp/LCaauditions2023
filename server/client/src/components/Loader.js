@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./Loader.css";
-import officePreLoad from "../images/mockingjay_loader.png";
+import officePreLoad from "../images/strangerloader.png";
 
 class Loader extends Component {
   constructor(props) {
