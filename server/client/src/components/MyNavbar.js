@@ -21,7 +21,7 @@ const noAdminSidebarData = [
     cName: "nav-text",
   },
   {
-    title: "Profile",
+    title: "Profile Info",
     path: "/profile",
     icon: <IoIcons.IoIosPaper />,
     cName: "nav-text",
