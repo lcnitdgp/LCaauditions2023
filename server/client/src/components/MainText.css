@@ -7,12 +7,12 @@
 
 @font-face {
   font-family: auditionFont;
-  src: url("fonts/Hunger Games.ttf") format("truetype");
+  src: url("fonts/Stranger\ Things.ttf") format("truetype");
 }
 
 @font-face {
   font-family: auditionFonto;
-  src: url("fonts/ethnocentric rg.otf") format("truetype");
+  src: url("fonts/Stranger\ Things.ttf") format("truetype");
 }
 
 
@@ -124,7 +124,7 @@ p {
   /* background-image: linear-gradient(#ffe470, #a56600);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
-  color: #cecc54;
+  color: #ff1515;
   text-shadow: 0 0 5px #383836, 0 0 10px #383836, 0 0 15px #383836,
     0 0 20px #383836, 0 0 25px #383836, 0 0 30px #383836, 0 0 35px #383836;
   }
