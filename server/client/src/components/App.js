@@ -31,7 +31,7 @@ class App extends Component {
     setTimeout(() => {
       this.loading.current.style.display = "none";
       this.routes.current.classList.add("main_part");
-    }, 4000);
+    }, 1000);
   }
 
   render() {
