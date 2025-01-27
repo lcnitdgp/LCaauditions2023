@@ -126,6 +126,6 @@ p {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
   color: #ff1515;
-  text-shadow: 0 0 5px #383836, 0 0 10px #383836, 0 0 15px #383836,
-    0 0 20px #383836, 0 0 25px #383836, 0 0 30px #383836, 0 0 35px #383836;
+  text-shadow: 0 0 5px #ff1515, 0 0 10px #383836, 0 0 15px #383836, 0 0 20px #383836, 0 0 25px #383836, 0 0 30px #383836, 0 0 35px #383836;
+  letter-spacing: 0.3rem;
   }
