@@ -4,11 +4,14 @@ import axios from "../config/axios";
 import { Form, Button } from "react-bootstrap";
 import { useHistory, Redirect } from "react-router-dom";
 import Loader from "./Loader";
+import { baseURLlink } from "../config/configurl.js";
 import "./ProfileEdit.css";
 import { updateUser } from "../actions";
+
 const escapeStringRegexp = require("escape-string-regexp");
 
-const backendUrl = process.env.REACT_APP_BACKEND_URL;
+
+const backendUrl = baseURLlink;
 
 function ProfileEdit(props) {
   const [form, setForm] = useState({});

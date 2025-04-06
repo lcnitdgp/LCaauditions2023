@@ -5,6 +5,7 @@ import { Form, Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 // import ProfileFormElement from "./ProfileFormElement";
 import "./ProfileFormElement.css";
+import { baseURLlink } from "../config/configurl.js";
 
 function ProfileEdit(props) {
   const [form, setForm] = useState({});
@@ -12,7 +13,7 @@ function ProfileEdit(props) {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/api/profile`)
+      .get(`${baseURLlink}/api/profile`)
       .then((response) => {
         console.log(response.data);
         setForm(response.data);

@@ -6,6 +6,7 @@ import { fetchUser } from "../actions";
 import { Link, useHistory } from "react-router-dom";
 import $ from "jquery";
 import MainText from "./MainText";
+import { baseURLlink } from "../config/configurl.js";
 
 function Landing(props) {
   let history = useHistory();
@@ -23,9 +24,10 @@ function Landing(props) {
     });
   }, []);
 
+
   const onClickSignIn = async () => {
     console.log("The user has to signUp.");
-    window.open(`${process.env.REACT_APP_BACKEND_URL}/auth/google`, "_self");
+    window.open(`${baseURLlink}/auth/google`, "_self");
     await props.fetchUser();
   };
   const renderSignUpButton = () => {

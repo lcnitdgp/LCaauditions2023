@@ -2,6 +2,7 @@ import React, { Component, useState } from "react";
 import { connect } from "react-redux";
 import { Modal, Button } from "react-bootstrap";
 import axios from "../../config/axios";
+import { baseURLlink } from "../../config/configurl";
 
 function MakeAdminModal(props) {
   const [show, setShow] = useState(false);
@@ -36,7 +37,7 @@ function MakeAdminModal(props) {
               console.log(props.id, props.index);
 
               await axios.post(
-                `${process.env.REACT_APP_BACKEND_URL}/api/admin`,
+                `${baseURLlink}/api/admin`,
                 { id: props.id }
               );
               props.onMakeAdmin(props.id);
